@@ -57,21 +57,6 @@ with col1:
 with col2:
     st.title("Sam Chatbot")
 
-# Create sidebar
-with st.sidebar:
-    st.image("./public/sam.svg", width=60)
-    st.header("Settings")
-
-    # Theme selector
-    theme = st.radio("Theme", ["Claro", "Oscuro"], index=0 if st.session_state["theme"] == "Claro" else 1)
-    if theme == "Claro":
-        st.button("Apply", on_click=background_color_claro)
-    else:
-        st.button("Apply theme", on_click=background_color_oscuro)
-
-    # Text size selector
-    text_size = st.slider("Text size", 10, 30, st.session_state["text_size"])
-    st.button("Apply text size", on_click=apply_text_size, args=(text_size,))
 
 # Initialize chat history
 if "messages" not in st.session_state:
