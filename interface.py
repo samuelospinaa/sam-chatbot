@@ -1,5 +1,4 @@
 import streamlit as st
-from streamlit_chat import message
 import backend
 
 # Main page configuration

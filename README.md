@@ -8,7 +8,7 @@ Sam Chatbot is an interactive web application built with [Streamlit](https://str
 - Persistent chat history for an enhanced user experience.
 - Integration with the Gemini API for AI-driven response generation.
 
-## 🛠️ Technologies Used
+## 🛠️ Technologies Useds
 - **Python 3.8+**: Core programming language.
 - **Streamlit**: Framework for building user interfaces.
 - **streamlit_chat**: Library to manage chatbot messages.
