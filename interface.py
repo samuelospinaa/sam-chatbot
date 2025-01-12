@@ -1,5 +1,6 @@
 import streamlit as st
 import backend
+from streamlit_chat import message
 
 # Main page configuration
 st.set_page_config(page_title="Sam Chatbot", page_icon="./public/sam.svg", layout="centered", initial_sidebar_state="collapsed")
