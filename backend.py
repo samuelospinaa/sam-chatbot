@@ -20,12 +20,30 @@ generation_config = {
   "response_mime_type": "text/plain",
 }
 
+functions = [
+  {
+    "name": "get_product_price",
+    "description": "Obtener mejores precios y mejores proveedores de producto en especifico",
+    "parameters": {
+      "type": "object",
+      "properties": {
+        "product_name": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "product_name"
+      ]
+    }
+  }
+]
+
 # Crear un modelo generativo
 model = genai.GenerativeModel(
-  model_name="gemini-1.5-flash-8b",
+  model_name="gemini-2.0-flash",
   generation_config=generation_config,
   system_instruction="""
-"Respond in a clear and concise manner, as if you were explaining a concept to a curious child. Avoid using technical terms like 'algorithm', 'neuron', or 'token'. Focus on the meaning and practical application of the information, using simple examples and analogies. If you are unsure how to respond without revealing technical details, rephrase the answer to be more general and accessible. Either dont explain or show what the user are saying or what is your process to chose the answer."""
+""""Eres un asistente para una pagina que se llama Dropi, la cual funciona para que personas que quieran hacer dropshipping puedan escoger y ver precios en general productos ganadores. Dentro de tus funciones esta el dar los mejores precios y cual es proveedor del producto que el usuario te de, a su vez dar cualquier tipo de asesoria sobre dropshipping que el usuario te pida."""
 )
 
 
